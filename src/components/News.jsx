@@ -4,6 +4,7 @@ import moment from 'moment/moment'
 
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 import { useGetCryptosQuery } from '../services/cryptoApi'
+import Loader from './Loader'
 
 const {Text, Title} = Typography
 const {Option} = Select
@@ -18,7 +19,7 @@ const News = ({simplified}) => {
 
   const demoImgUrl = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Google_News_icon.png"
 
-  if (!cryptoNews?.data) return "Loading.."
+  if (!cryptoNews?.data) return <Loader/>
 
   const displayedNews = simplified
     ? cryptoNews?.data.slice(0, 6) // Show only 6 items if simplified is true

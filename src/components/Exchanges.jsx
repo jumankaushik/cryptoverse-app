@@ -3,7 +3,8 @@ import { Row, Typography, Col } from "antd";
 
 import BgImage from "../images/full-stack.png";
 
-// Exchanges (Commin Soon)
+// Exchanges (Coming Soon)
+
 const Exchanges = () => {
   return (
     <Col gutter={[32, 32]} className="exchanges-card-container">

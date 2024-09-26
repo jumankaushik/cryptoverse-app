@@ -15,8 +15,6 @@ const News = ({simplified}) => {
   const {data: cryptoNews } = useGetCryptoNewsQuery(newsCategory)
   const { data } = useGetCryptosQuery(100)
 
-  //console.log(cryptoNews)
-
   const demoImgUrl = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Google_News_icon.png"
 
   if (!cryptoNews?.data) return <Loader/>
